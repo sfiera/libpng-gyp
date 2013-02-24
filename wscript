@@ -2,7 +2,7 @@
 
 def common(ctx):
     ctx.default_sdk = "10.6"
-    ctx.default_compiler = "gcc"
+    ctx.default_compiler = "clang"
     ctx.load("compiler_c")
     ctx.load("core", "ext/waf-sfiera")
 
