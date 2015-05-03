@@ -4,7 +4,7 @@ all:
 	@$(NINJA)
 
 test: all
-	exit 1
+	cd libpng-1.6.0 && ../out/cur/pngtest
 
 clean:
 	@$(NINJA) -t clean
