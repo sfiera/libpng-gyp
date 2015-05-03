@@ -3,25 +3,25 @@
     , "product_prefix": ""
     , "type": "static_library"
     , "sources":
-      [ "libpng-1.6.0/png.c"
-      , "libpng-1.6.0/pngset.c"
-      , "libpng-1.6.0/pngget.c"
-      , "libpng-1.6.0/pngrutil.c"
-      , "libpng-1.6.0/pngtrans.c"
-      , "libpng-1.6.0/pngwutil.c"
-      , "libpng-1.6.0/pngread.c"
-      , "libpng-1.6.0/pngrio.c"
-      , "libpng-1.6.0/pngwio.c"
-      , "libpng-1.6.0/pngwrite.c"
-      , "libpng-1.6.0/pngrtran.c"
-      , "libpng-1.6.0/pngwtran.c"
-      , "libpng-1.6.0/pngmem.c"
-      , "libpng-1.6.0/pngerror.c"
-      , "libpng-1.6.0/pngpread.c"
+      [ "libpng-1.6.17/png.c"
+      , "libpng-1.6.17/pngset.c"
+      , "libpng-1.6.17/pngget.c"
+      , "libpng-1.6.17/pngrutil.c"
+      , "libpng-1.6.17/pngtrans.c"
+      , "libpng-1.6.17/pngwutil.c"
+      , "libpng-1.6.17/pngread.c"
+      , "libpng-1.6.17/pngrio.c"
+      , "libpng-1.6.17/pngwio.c"
+      , "libpng-1.6.17/pngwrite.c"
+      , "libpng-1.6.17/pngrtran.c"
+      , "libpng-1.6.17/pngwtran.c"
+      , "libpng-1.6.17/pngmem.c"
+      , "libpng-1.6.17/pngerror.c"
+      , "libpng-1.6.17/pngpread.c"
       ]
     , "include_dirs":
       [ "include/darwin"
-      , "libpng-1.6.0"
+      , "libpng-1.6.17"
       , "src/darwin"
       ]
     , "direct_dependent_settings":
@@ -52,7 +52,7 @@
 
   , { "target_name": "pngtest"
     , "type": "executable"
-    , "sources": ["libpng-1.6.0/pngtest.c"]
+    , "sources": ["libpng-1.6.17/pngtest.c"]
     , "dependencies": ["libpng"]
     }
   ]
