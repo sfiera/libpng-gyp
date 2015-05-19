@@ -21,13 +21,16 @@
       ]
     , "include_dirs":
       [ "include/darwin"
+      , "include/linux"
       , "libpng-1.6.17"
       , "src/darwin"
+      , "src/linux"
       ]
     , "direct_dependent_settings":
       { "include_dirs":
         [ "include/all"
         , "include/darwin"
+        , "include/linux"
         ]
       }
     , "link_settings":
@@ -44,6 +47,16 @@
             ]
           , "direct_dependent_settings":
             { "include_dirs!": ["include/darwin"]
+            }
+          }
+        ]
+      , [ "OS != 'linux'"
+        , { "include_dirs!":
+            [ "include/linux"
+            , "src/linux"
+            ]
+          , "direct_dependent_settings":
+            { "include_dirs!": ["include/linux"]
             }
           }
         ]
