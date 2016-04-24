@@ -1,0 +1,58 @@
+config("libpng_private") {
+  cflags = [
+    "-Wall",
+    "-Werror",
+  ]
+  include_dirs = [ "libpng-1.6.17" ]
+
+  if (target_os == "mac") {
+    include_dirs += [ "src/darwin" ]
+  } else if (target_os == "linux") {
+    include_dirs += [ "src/mac" ]
+  }
+}
+
+config("libpng_public") {
+  include_dirs = [ "include/all" ]
+  libs = [
+    "-lz",
+    "-lm",
+  ]
+
+  if (target_os == "mac") {
+    include_dirs += [ "include/darwin" ]
+  } else if (target_os == "linux") {
+    include_dirs += [ "include/linux" ]
+  }
+}
+
+static_library("libpng") {
+  sources = [
+    "libpng-1.6.17/png.c",
+    "libpng-1.6.17/pngerror.c",
+    "libpng-1.6.17/pngget.c",
+    "libpng-1.6.17/pngmem.c",
+    "libpng-1.6.17/pngpread.c",
+    "libpng-1.6.17/pngread.c",
+    "libpng-1.6.17/pngrio.c",
+    "libpng-1.6.17/pngrtran.c",
+    "libpng-1.6.17/pngrutil.c",
+    "libpng-1.6.17/pngset.c",
+    "libpng-1.6.17/pngtrans.c",
+    "libpng-1.6.17/pngwio.c",
+    "libpng-1.6.17/pngwrite.c",
+    "libpng-1.6.17/pngwtran.c",
+    "libpng-1.6.17/pngwutil.c",
+  ]
+  configs += [ ":libpng_private" ]
+  public_configs = [ ":libpng_public" ]
+}
+
+executable("pngtest") {
+  sources = [
+    "libpng-1.6.17/pngtest.c",
+  ]
+  deps = [
+    ":libpng",
+  ]
+}
