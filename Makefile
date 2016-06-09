@@ -9,19 +9,8 @@ test: all
 clean:
 	@$(NINJA) -t clean
 
-dist:
-	scripts/dist.py
-
 distclean:
 	rm -Rf out/
+	rm -f build/lib/scripts/gn
 
-run: all
-	out/cur/Antares.app/Contents/MacOS/Antares
-
-sign:
-	codesign --force \
-		--sign "Developer ID Application" \
-		--entitlements resources/entitlements.plist \
-		out/cur/Antares.app
-
-.PHONY: all clean dist distclean run sign test
+.PHONY: all test clean distclean
