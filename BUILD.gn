@@ -3,7 +3,7 @@ config("libpng_private") {
     "-Wall",
     "-Werror",
   ]
-  include_dirs = [ "libpng-1.6.17" ]
+  include_dirs = [ "libpng-1.6.28" ]
 
   if (target_os == "mac") {
     include_dirs += [ "src/darwin" ]
@@ -28,21 +28,21 @@ config("libpng_public") {
 
 static_library("libpng") {
   sources = [
-    "libpng-1.6.17/png.c",
-    "libpng-1.6.17/pngerror.c",
-    "libpng-1.6.17/pngget.c",
-    "libpng-1.6.17/pngmem.c",
-    "libpng-1.6.17/pngpread.c",
-    "libpng-1.6.17/pngread.c",
-    "libpng-1.6.17/pngrio.c",
-    "libpng-1.6.17/pngrtran.c",
-    "libpng-1.6.17/pngrutil.c",
-    "libpng-1.6.17/pngset.c",
-    "libpng-1.6.17/pngtrans.c",
-    "libpng-1.6.17/pngwio.c",
-    "libpng-1.6.17/pngwrite.c",
-    "libpng-1.6.17/pngwtran.c",
-    "libpng-1.6.17/pngwutil.c",
+    "libpng-1.6.28/png.c",
+    "libpng-1.6.28/pngerror.c",
+    "libpng-1.6.28/pngget.c",
+    "libpng-1.6.28/pngmem.c",
+    "libpng-1.6.28/pngpread.c",
+    "libpng-1.6.28/pngread.c",
+    "libpng-1.6.28/pngrio.c",
+    "libpng-1.6.28/pngrtran.c",
+    "libpng-1.6.28/pngrutil.c",
+    "libpng-1.6.28/pngset.c",
+    "libpng-1.6.28/pngtrans.c",
+    "libpng-1.6.28/pngwio.c",
+    "libpng-1.6.28/pngwrite.c",
+    "libpng-1.6.28/pngwtran.c",
+    "libpng-1.6.28/pngwutil.c",
   ]
   configs += [ ":libpng_private" ]
   public_configs = [ ":libpng_public" ]
@@ -50,7 +50,7 @@ static_library("libpng") {
 
 executable("pngtest") {
   sources = [
-    "libpng-1.6.17/pngtest.c",
+    "libpng-1.6.28/pngtest.c",
   ]
   deps = [
     ":libpng",

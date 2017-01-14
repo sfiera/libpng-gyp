@@ -1,1 +1,1 @@
-../../libpng-1.6.17/pngconf.h
+../../libpng-1.6.28/pngconf.h
