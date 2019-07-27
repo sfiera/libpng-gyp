@@ -1,8 +1,8 @@
 declare_args() {
-  if (target_os == "mac") {
-    libpng = "bundled"
-  } else {
+  if (target_os == "linux" && rebase_path(".", "//") != ".") {
     libpng = "system"
+  } else {
+    libpng = "bundled"
   }
 }
 assert(libpng == "system" || libpng == "bundled")
