@@ -1,3 +1,6 @@
 [submodule "build/lib"]
 	path = build/lib
 	url = https://github.com/sfiera/gn-tools
+[submodule "ext/zlib"]
+	path = ext/zlib
+	url = https://github.com/sfiera/zlib-gn.git
