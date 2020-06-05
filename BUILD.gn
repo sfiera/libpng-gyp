@@ -55,7 +55,7 @@ if (libpng == "bundled") {
   import("//build/lib/pkg_config.gni")
 
   pkg_config("libpng_public") {
-    lib = "libpng16"
+    lib = "libpng"
   }
 
   source_set("libpng") {
