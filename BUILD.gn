@@ -26,6 +26,8 @@ if (libpng == "bundled") {
 
   static_library("libpng") {
     sources = [
+      "libpng-1.6.28/arm/arm_init.c",
+      "libpng-1.6.28/arm/filter_neon_intrinsics.c",
       "libpng-1.6.28/png.c",
       "libpng-1.6.28/pngerror.c",
       "libpng-1.6.28/pngget.c",
