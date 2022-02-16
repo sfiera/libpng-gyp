@@ -9,10 +9,12 @@ assert(libpng == "system" || libpng == "bundled")
 
 if (libpng == "bundled") {
   config("libpng_private") {
-    cflags = [
-      "-Wall",
-      "-Werror",
-    ]
+    if (current_toolchain != "//build/lib/win:msvc") {
+      cflags = [
+        "-Wall",
+        "-Werror",
+      ]
+    }
     include_dirs = [
       "libpng-1.6.28",
       "src",
@@ -21,7 +23,9 @@ if (libpng == "bundled") {
 
   config("libpng_public") {
     include_dirs = [ "include" ]
-    libs = [ "m" ]
+    if (current_toolchain != "//build/lib/win:msvc") {
+      libs = [ "m" ]
+    }
   }
 
   static_library("libpng") {
