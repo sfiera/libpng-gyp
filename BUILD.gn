@@ -48,6 +48,9 @@ if (libpng == "bundled") {
       "libpng-1.6.38/pngwtran.c",
       "libpng-1.6.38/pngwutil.c",
     ]
+    if (target_os == "mac") {
+      sources += [ "libpng-1.6.38/arm/palette_neon_intrinsics.c" ]
+    }
     deps = [ "//ext/zlib" ]
     configs += [ ":libpng_private" ]
     public_configs = [ ":libpng_public" ]
