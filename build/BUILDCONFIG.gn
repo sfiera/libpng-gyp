@@ -38,7 +38,10 @@ if (host_os == "mac") {
   assert(false, "unsupported host_os $host_os")
 }
 
-_default_configs = [ "//build/lib:c++11" ]
+_default_configs = [
+  "//build/lib:c++11",
+  "//build:add_flags",
+]
 if (mode == "dev") {
   _default_configs += [ "//build/lib:dev" ]
 } else if (mode == "opt") {
@@ -49,7 +52,10 @@ if (mode == "dev") {
   assert(false, "unsupported mode $mode")
 }
 if (current_os == "mac") {
-  _default_configs += [ "//build/lib:libc++" ]
+  _default_configs += [
+    "//build/lib:libc++",
+    "//build:mac-universal",
+  ]
 }
 
 set_defaults("executable") {
