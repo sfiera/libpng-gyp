@@ -59,7 +59,7 @@
 #define PACKAGE_NAME "libpng"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "libpng 1.6.28"
+#define PACKAGE_STRING "libpng 1.6.38"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "libpng"
@@ -68,7 +68,7 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "1.6.28"
+#define PACKAGE_VERSION "1.6.38"
 
 /* Turn on ARM Neon optimizations at run-time */
 /* #undef PNG_ARM_NEON_API_SUPPORTED */
@@ -95,7 +95,7 @@
 /* #undef TM_IN_SYS_TIME */
 
 /* Version number of package */
-#define VERSION "1.6.28"
+#define VERSION "1.6.38"
 
 /* Define to empty if `const' does not conform to ANSI C. */
 /* #undef const */
@@ -110,8 +110,8 @@
    previous line.  Perhaps some future version of Sun C++ will work with
    restrict; if so, hopefully it defines __RESTRICT like Sun C does.  */
 #if defined __SUNPRO_CC && !defined __RESTRICT
-# define _Restrict
-# define __restrict__
+#define _Restrict
+#define __restrict__
 #endif
 
 /* Define to `unsigned int' if <sys/types.h> does not define. */
