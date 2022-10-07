@@ -16,7 +16,7 @@ if (libpng == "bundled") {
       ]
     }
     include_dirs = [
-      "libpng-1.6.28",
+      "libpng-1.6.38",
       "src",
     ]
   }
@@ -30,23 +30,23 @@ if (libpng == "bundled") {
 
   static_library("libpng") {
     sources = [
-      "libpng-1.6.28/arm/arm_init.c",
-      "libpng-1.6.28/arm/filter_neon_intrinsics.c",
-      "libpng-1.6.28/png.c",
-      "libpng-1.6.28/pngerror.c",
-      "libpng-1.6.28/pngget.c",
-      "libpng-1.6.28/pngmem.c",
-      "libpng-1.6.28/pngpread.c",
-      "libpng-1.6.28/pngread.c",
-      "libpng-1.6.28/pngrio.c",
-      "libpng-1.6.28/pngrtran.c",
-      "libpng-1.6.28/pngrutil.c",
-      "libpng-1.6.28/pngset.c",
-      "libpng-1.6.28/pngtrans.c",
-      "libpng-1.6.28/pngwio.c",
-      "libpng-1.6.28/pngwrite.c",
-      "libpng-1.6.28/pngwtran.c",
-      "libpng-1.6.28/pngwutil.c",
+      "libpng-1.6.38/arm/arm_init.c",
+      "libpng-1.6.38/arm/filter_neon_intrinsics.c",
+      "libpng-1.6.38/png.c",
+      "libpng-1.6.38/pngerror.c",
+      "libpng-1.6.38/pngget.c",
+      "libpng-1.6.38/pngmem.c",
+      "libpng-1.6.38/pngpread.c",
+      "libpng-1.6.38/pngread.c",
+      "libpng-1.6.38/pngrio.c",
+      "libpng-1.6.38/pngrtran.c",
+      "libpng-1.6.38/pngrutil.c",
+      "libpng-1.6.38/pngset.c",
+      "libpng-1.6.38/pngtrans.c",
+      "libpng-1.6.38/pngwio.c",
+      "libpng-1.6.38/pngwrite.c",
+      "libpng-1.6.38/pngwtran.c",
+      "libpng-1.6.38/pngwutil.c",
     ]
     deps = [ "//ext/zlib" ]
     configs += [ ":libpng_private" ]
@@ -54,7 +54,7 @@ if (libpng == "bundled") {
   }
 
   executable("pngtest") {
-    sources = [ "libpng-1.6.28/pngtest.c" ]
+    sources = [ "libpng-1.6.38/pngtest.c" ]
     deps = [ ":libpng" ]
   }
 } else {
