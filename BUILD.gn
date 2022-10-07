@@ -13,7 +13,6 @@ if (libpng == "bundled") {
       cflags = [
         "-Wall",
         "-Werror",
-        "-Wno-unused-but-set-variable",
       ]
     }
     include_dirs = [
