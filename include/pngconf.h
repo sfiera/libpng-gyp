@@ -1,1 +1,1 @@
-#include "../libpng-1.6.38/pngconf.h"
+#include "../libpng-1.6.50/pngconf.h"
